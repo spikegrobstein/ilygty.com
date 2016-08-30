@@ -1,0 +1,84 @@
+body {
+	font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	text-align: center;
+}
+
+a img {
+	border: none;
+}
+
+h1 {
+	color: #aaa;
+	padding-bottom: 40px;
+}
+
+h1 img {
+	margin-bottom: -40px;
+}
+
+h1 span {
+	width: 300px;
+	display: inline-block;
+}
+
+h1 span#left {
+	text-align: right;
+}
+
+h1 span#right {
+	text-align: left;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+#instructions {
+	border: 1px solid #efefef;
+	border-bottom-width: 2px;
+	width: 20em;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 10px;
+	padding-top: 5px;
+	margin: auto;
+	margin-top: 20px;
+	color: #aaa;
+}
+
+#query_field {
+	width: 400px;
+}
+
+#header {
+	padding: 20px 0px;
+	vertical-align: middle;
+}
+
+#content {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#footer {
+	padding: 20px 0px;
+	font-size: 80%;
+	color: #aaa;
+}
+
+#footer div {
+	margin-bottom: 5px;
+}
+
+#footer a {
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: black;
+	text-decoration: underline;
+}
