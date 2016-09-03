@@ -22,12 +22,12 @@ There's nothing to steal here, but if you wanna steal something, go for it; Just
     <h1>
       <span id="left">I'll let you</span>
       <img src="google_logo.gif" alt="Google" />
-      <span id="right">that yourself<?= $_GET['thug'] ? ', bitch' : ''; ?>.</span></h1>
+      <span id="right">that yourself</span></h1>
   </div>
   <div id="content">
     <form method="get" action="//www.google.com/search">
       <fieldset>
-        <input type="text" name="q" value="<?= urldecode($_GET['q']); ?>" id="query_field" />
+        <input type="text" name="q" value="" id="query_field" />
         <div>
           <input type="submit" value="Google Search" />
           <input type="submit" value="I'm Feeling Lucky" name="btnI" />
@@ -56,6 +56,37 @@ There's nothing to steal here, but if you wanna steal something, go for it; Just
             alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
     </p>
   </div>
+
+  <script type="text/javascript">
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    var isThug = !!getParameterByName('thug');
+    var q = getParameterByName('q');
+
+    var section = document.getElementById('right');
+    var appendText = '.'
+
+    var queryField = document.getElementById('query_field');
+
+    if (isThug) {
+      appendText = ', bitch.';
+    }
+
+    section.innerText += appendText;
+
+    if (q) {
+      queryField.value = q;
+    }
+
+  </script>
 
   <!-- Start Google Analytics -->
   <script type="text/javascript">
